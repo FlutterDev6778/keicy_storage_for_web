@@ -31,7 +31,7 @@ class KeicyStorageForWeb {
   String _getValidatedFileName(String fileName) {
     var listFileName = fileName.split('.');
     String extention = listFileName[listFileName.length - 1];
-    String fName = fileName.substring(0, fileName.length - extention.length - 2);
+    String fName = fileName.substring(0, fileName.length - extention.length - 1);
     return "${fName}_${Random().nextInt(10000000).toString()}.$extention";
   }
 }
